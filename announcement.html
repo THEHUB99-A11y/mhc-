@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Announcements - Munali Hills College</title>
+    <link rel="icon" href="logo 4k.webp" type="image/x-icon">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="public-site.css">
+    <link rel="stylesheet" href="footer.css">
+</head>
+<body class="public-site">
+    <div class="page-shell">
+        <section class="page-card announcements-hero">
+            <div class="badge">News &amp; Events</div>
+            <h1 class="title">Latest College Updates</h1>
+            <p class="subtitle">Stay connected with campus life, student achievements, and memorable events from Munali Hills College.</p>
+        </section>
+
+        <section class="page-card">
+            <p id="noAnnouncements">We currently have no public announcements. Please check back later.</p>
+            <div class="list-stack" id="announcementList"></div>
+        </section>
+
+        <section class="page-card announcements-courses" aria-labelledby="registered-courses-title">
+            <h2 class="title" id="registered-courses-title">Registered courses</h2>
+            <p class="subtitle">Continuous assessment is out of 40. The final exam carries the remaining 60.</p>
+            <div class="course-table-wrap" tabindex="0" role="region" aria-label="Registered courses and academic progress">
+                <table class="course-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Course</th>
+                            <th scope="col">Lecturer</th>
+                            <th scope="col">Credits</th>
+                            <th scope="col">CA mark</th>
+                            <th scope="col">Attendance</th>
+                            <th scope="col">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row"><strong>ICT 301</strong><span>Network Security Fundamentals</span></th>
+                            <td>Mr B. Phiri</td>
+                            <td>4</td>
+                            <td>31/40</td>
+                            <td>92%</td>
+                            <td><span class="course-status">On track</span></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><strong>ICT 303</strong><span>Database Systems II</span></th>
+                            <td>Dr M. Tembo</td>
+                            <td>4</td>
+                            <td>28/40</td>
+                            <td>88%</td>
+                            <td><span class="course-status">On track</span></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><strong>ICT 305</strong><span>Web Application Development</span></th>
+                            <td>Ms N. Zulu</td>
+                            <td>4</td>
+                            <td>35/40</td>
+                            <td>96%</td>
+                            <td><span class="course-status">On track</span></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><strong>ICT 307</strong><span>Software Engineering</span></th>
+                            <td>Mr K. Chola</td>
+                            <td>3</td>
+                            <td>24/40</td>
+                            <td>74%</td>
+                            <td><span class="course-status course-status--below">Below 75%</span></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><strong>ICT 309</strong><span>Computer Networks II</span></th>
+                            <td>Dr L. Mulenga</td>
+                            <td>4</td>
+                            <td>30/40</td>
+                            <td>85%</td>
+                            <td><span class="course-status">On track</span></td>
+                        </tr>
+                        <tr>
+                            <th scope="row"><strong>COM 301</strong><span>Research Methods</span></th>
+                            <td>Mrs C. Sakala</td>
+                            <td>2</td>
+                            <td>26/40</td>
+                            <td>81%</td>
+                            <td><span class="course-status">On track</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <section class="exam-registration-notice" aria-labelledby="exam-registration-title">
+                <h3 id="exam-registration-title">Exam registration</h3>
+                <p>Opens 19 October and closes 6 November. You can register once your fee balance is cleared and attendance is at least 75% in each course.</p>
+            </section>
+        </section>
+
+        <section class="page-card">
+            <div class="badge">Event Gallery</div>
+            <h2 class="title">Moments from Campus Life</h2>
+            <p class="subtitle">A snapshot of graduation, student activities, and special community events.</p>
+            <div class="gallery-slider" aria-label="Event gallery slider">
+                <button type="button" class="gallery-fullscreen" aria-label="View image in full screen">⤢</button>
+                <button type="button" class="gallery-nav gallery-prev" aria-label="Previous image">&#10094;</button>
+                <div class="gallery-stage">
+                    <div class="gallery-slide active" data-index="0">
+                        <img src="gradyating students.webp" alt="Graduation celebration at Munali Hills College">
+                        <div class="gallery-caption">Graduation Celebration</div>
+                    </div>
+                    <div class="gallery-slide" data-index="1">
+                        <img src="student 2.webp" alt="Students participating in a campus event">
+                        <div class="gallery-caption">Student Engagement</div>
+                    </div>
+                    <div class="gallery-slide" data-index="2">
+                        <img src="11.webp" alt="College event activity with students and staff">
+                        <div class="gallery-caption">Campus Event</div>
+                    </div>
+                    <div class="gallery-slide" data-index="3">
+                        <img src="principle.webp" alt="Students gathered for a college program">
+                        <div class="gallery-caption">Community Programs</div>
+                    </div>
+                    <div class="gallery-slide" data-index="4">
+                        <img src="gradyating students (1).webp" alt="Graduating students posing together after the ceremony">
+                        <div class="gallery-caption">Graduating Class</div>
+                    </div>
+                    <div class="gallery-slide" data-index="5">
+                        <img src="student 4.webp" alt="Students in a lively school activity">
+                        <div class="gallery-caption">Campus Activities</div>
+                    </div>
+                    <div class="gallery-slide" data-index="6">
+                        <img src="student 5.webp" alt="Student life and engagement at the college">
+                        <div class="gallery-caption">Student Life</div>
+                    </div>
+                    <div class="gallery-slide" data-index="7">
+                        <img src="dcs.webp" alt="Special college event and community engagement">
+                        <div class="gallery-caption">Special Occasion</div>
+                    </div>
+                    <div class="gallery-slide" data-index="8">
+                        <img src="FB_IMG_1773737761592.webp" alt="Campus event photo from the college gallery">
+                        <div class="gallery-caption">Campus Memories</div>
+                    </div>
+                    <div class="gallery-slide" data-index="9">
+                        <img src="FB_IMG_1782737969540.jpg" alt="Another campus event photo from the gallery">
+                        <div class="gallery-caption">College Activities</div>
+                    </div>
+                    <div class="gallery-slide" data-index="10">
+                        <img src="FB_IMG_1782737972301.jpg" alt="Practical learning and student activity image">
+                        <div class="gallery-caption">Practical Learning</div>
+                    </div>
+                    <div class="gallery-slide" data-index="11">
+                        <img src="FB_IMG_1782737975433.jpg" alt="Students in a practical or event setting">
+                        <div class="gallery-caption">Student Participation</div>
+                    </div>
+                    <div class="gallery-slide" data-index="12">
+                        <img src="gs1.webp" alt="A memorable campus event snapshot">
+                        <div class="gallery-caption">Campus Highlights</div>
+                    </div>
+                    <div class="gallery-slide" data-index="13">
+                        <img src="1.jpg" alt="Campus gallery image 1">
+                        <div class="gallery-caption">Campus Image 1</div>
+                    </div>
+                    <div class="gallery-slide" data-index="14">
+                        <img src="2.jpg" alt="Campus gallery image 2">
+                        <div class="gallery-caption">Campus Image 2</div>
+                    </div>
+                    <div class="gallery-slide" data-index="15">
+                        <img src="3.jpg" alt="Campus gallery image 3">
+                        <div class="gallery-caption">Campus Image 3</div>
+                    </div>
+                    <div class="gallery-slide" data-index="16">
+                        <img src="4.jpg" alt="Campus gallery image 4">
+                        <div class="gallery-caption">Campus Image 4</div>
+                    </div>
+                    <div class="gallery-slide" data-index="17">
+                        <img src="5.jpg" alt="Campus gallery image 5">
+                        <div class="gallery-caption">Campus Image 5</div>
+                    </div>
+                    <div class="gallery-slide" data-index="18">
+                        <img src="6.jpg" alt="Campus gallery image 6">
+                        <div class="gallery-caption">Campus Image 6</div>
+                    </div>
+                    <div class="gallery-slide" data-index="19">
+                        <img src="7.jpg" alt="Campus gallery image 7">
+                        <div class="gallery-caption">Campus Image 7</div>
+                    </div>
+                    <div class="gallery-slide" data-index="20">
+                        <img src="8.jpg" alt="Campus gallery image 8">
+                        <div class="gallery-caption">Campus Image 8</div>
+                    </div>
+                    <div class="gallery-slide" data-index="21">
+                        <img src="9.jpg" alt="Campus gallery image 9">
+                        <div class="gallery-caption">Campus Image 9</div>
+                    </div>
+                    <div class="gallery-slide" data-index="22">
+                        <img src="10.jpg" alt="Campus gallery image 10">
+                        <div class="gallery-caption">Campus Image 10</div>
+                    </div>
+                    <div class="gallery-slide" data-index="23">
+                        <img src="11.jpg" alt="Campus gallery image 11">
+                        <div class="gallery-caption">Campus Image 11</div>
+                    </div>
+                    <div class="gallery-slide" data-index="24">
+                        <img src="12.jpg" alt="Campus gallery image 12">
+                        <div class="gallery-caption">Campus Image 12</div>
+                    </div>
+                    <div class="gallery-slide" data-index="25">
+                        <img src="13.jpg" alt="Campus gallery image 13">
+                        <div class="gallery-caption">Campus Image 13</div>
+                    </div>
+                    <div class="gallery-slide" data-index="26">
+                        <img src="14.jpg" alt="Campus gallery image 14">
+                        <div class="gallery-caption">Campus Image 14</div>
+                    </div>
+                    <div class="gallery-slide" data-index="27">
+                        <img src="16.jpg" alt="Campus gallery image 16">
+                        <div class="gallery-caption">Campus Image 16</div>
+                    </div>
+                    <div class="gallery-slide" data-index="28">
+                        <img src="17.jpg" alt="Campus gallery image 17">
+                        <div class="gallery-caption">Campus Image 17</div>
+                    </div>
+                    <div class="gallery-slide" data-index="29">
+                        <img src="18.jpg" alt="Campus gallery image 18">
+                        <div class="gallery-caption">Campus Image 18</div>
+                    </div>
+                    <div class="gallery-slide" data-index="30">
+                        <img src="19.jpg" alt="Campus gallery image 19">
+                        <div class="gallery-caption">Campus Image 19</div>
+                    </div>
+                    <div class="gallery-slide" data-index="31">
+                        <img src="20.jpg" alt="Campus gallery image 20">
+                        <div class="gallery-caption">Campus Image 20</div>
+                    </div>
+                    <div class="gallery-slide" data-index="32">
+                        <img src="21.jpg" alt="Campus gallery image 21">
+                        <div class="gallery-caption">Campus Image 21</div>
+                    </div>
+                    <div class="gallery-slide" data-index="33">
+                        <img src="22.jpg" alt="Campus gallery image 22">
+                        <div class="gallery-caption">Campus Image 22</div>
+                    </div>
+                    <div class="gallery-slide" data-index="34">
+                        <img src="23.jpg" alt="Campus gallery image 23">
+                        <div class="gallery-caption">Campus Image 23</div>
+                    </div>
+                    <div class="gallery-slide" data-index="35">
+                        <img src="24.jpg" alt="Campus gallery image 24">
+                        <div class="gallery-caption">Campus Image 24</div>
+                    </div>
+                    <div class="gallery-slide" data-index="36">
+                        <img src="25.jpg" alt="Campus gallery image 25">
+                        <div class="gallery-caption">Campus Image 25</div>
+                    </div>
+                    <div class="gallery-slide" data-index="37">
+                        <img src="26.jpg" alt="Campus gallery image 26">
+                        <div class="gallery-caption">Campus Image 26</div>
+                    </div>
+                    <div class="gallery-slide" data-index="38">
+                        <img src="27.jpg" alt="Campus gallery image 27">
+                        <div class="gallery-caption">Campus Image 27</div>
+                    </div>
+                </div>
+                <button type="button" class="gallery-nav gallery-next" aria-label="Next image">&#10095;</button>
+            </div>
+            <div class="gallery-dots" aria-label="Slider indicators"></div>
+        </section>
+    </div>
+    <div class="gallery-fullscreen-overlay" aria-hidden="true">
+        <button type="button" class="gallery-fullscreen-close" aria-label="Close full screen view">×</button>
+        <button type="button" class="gallery-fullscreen-nav gallery-fullscreen-prev" aria-label="Previous image">&#10094;</button>
+        <div class="gallery-fullscreen-panel">
+            <img class="gallery-fullscreen-image" src="" alt="">
+            <div class="gallery-fullscreen-caption"></div>
+        </div>
+        <button type="button" class="gallery-fullscreen-nav gallery-fullscreen-next" aria-label="Next image">&#10095;</button>
+    </div>
+    <footer class="mhc-public-footer">
+    <div class="mhc-public-footer-inner">
+        <p class="mhc-public-copyright">&copy; <span data-current-year>2026</span> Munali Hills College. All rights reserved.</p>
+        <a class="mhc-public-home" href="index.html">Back to Home</a>
+        <nav class="mhc-public-socials" aria-label="Contact and social media">
+            <a href="https://www.facebook.com/munalihills" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8.2h2.8l.4-3.2h-3.2v-2c0-.9.3-1.6 1.6-1.6h1.7V3.1c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.2v2.4H7.7v3.2h2.7V21h3.1z"/></svg></a>
+            <a href="https://wa.me/260774069095" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" title="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a9.7 9.7 0 0 0-8.3 14.7L2.4 22l5.5-1.4A9.7 9.7 0 1 0 12 2zm0 17.7a8 8 0 0 1-4.1-1.1l-.3-.2-3.3.9.9-3.2-.2-.3A8 8 0 1 1 12 19.7zm4.4-6c-.2-.1-1.3-.7-1.5-.8-.2-.1-.4-.1-.5.1-.2.2-.6.8-.8.9-.1.2-.3.2-.5.1-.2-.1-.9-.3-1.8-1.1-.7-.6-1.1-1.3-1.3-1.5-.1-.2 0-.3.1-.5l.4-.4.2-.4c.1-.1 0-.3 0-.4l-.7-1.7c-.2-.4-.3-.4-.5-.4h-.4c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.2.9 2.4c.1.2 1.6 2.5 3.9 3.4.5.2.9.3 1.2.4.5.1.9.1 1.3.1.4-.1 1.3-.5 1.5-1 .2-.5.2-.9.2-1 0-.1-.2-.2-.4-.3z"/></svg></a>
+            <a href="mailto:munalihills@gmail.com" aria-label="Email Munali Hills College" title="Email"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zm9 7.2L20.4 7H3.6l8.4 5.2zm-9 4.9h18V8.8l-9 5.5-9-5.5v8.3z"/></svg></a>
+        </nav>
+    </div>
+</footer>
+<script>document.querySelectorAll('[data-current-year]').forEach(function(e){e.textContent=new Date().getFullYear();});</script>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const slides = Array.from(document.querySelectorAll('.gallery-slide'));
+        const dotsContainer = document.querySelector('.gallery-dots');
+        const prevButton = document.querySelector('.gallery-prev');
+        const nextButton = document.querySelector('.gallery-next');
+        const fullscreenButton = document.querySelector('.gallery-fullscreen');
+        const fullscreenOverlay = document.querySelector('.gallery-fullscreen-overlay');
+        const fullscreenImage = document.querySelector('.gallery-fullscreen-image');
+        const fullscreenCaption = document.querySelector('.gallery-fullscreen-caption');
+        const fullscreenClose = document.querySelector('.gallery-fullscreen-close');
+        const fullscreenPrev = document.querySelector('.gallery-fullscreen-prev');
+        const fullscreenNext = document.querySelector('.gallery-fullscreen-next');
+        const galleryStage = document.querySelector('.gallery-stage');
+        let currentIndex = 0;
+        let autoplayTimer = null;
+        let touchStartX = 0;
+
+        if (!slides.length) return;
+
+        slides.forEach((slide, index) => {
+            const image = slide.querySelector('img');
+            if (image) {
+                image.setAttribute('loading', index < 2 ? 'eager' : 'lazy');
+                image.setAttribute('decoding', 'async');
+            }
+        });
+
+        if (dotsContainer) {
+            slides.forEach((_, index) => {
+                const dot = document.createElement('button');
+                dot.type = 'button';
+                dot.className = 'gallery-dot' + (index === 0 ? ' active' : '');
+                dot.setAttribute('aria-label', `Go to slide ${index + 1}`);
+                dot.addEventListener('click', () => showSlide(index));
+                dotsContainer.appendChild(dot);
+            });
+        }
+
+        const dots = Array.from(document.querySelectorAll('.gallery-dot'));
+
+        function showSlide(index) {
+            currentIndex = (index + slides.length) % slides.length;
+            slides.forEach((slide, slideIndex) => {
+                const isActive = slideIndex === currentIndex;
+                slide.classList.toggle('active', isActive);
+                slide.setAttribute('aria-hidden', isActive ? 'false' : 'true');
+            });
+            dots.forEach((dot, dotIndex) => {
+                dot.classList.toggle('active', dotIndex === currentIndex);
+            });
+        }
+
+        function startAutoplay() {
+            clearInterval(autoplayTimer);
+            if (window.matchMedia('(max-width: 768px)').matches) {
+                return;
+            }
+            autoplayTimer = setInterval(() => {
+                showSlide(currentIndex + 1);
+            }, 5000);
+        }
+
+        function updateFullscreenView() {
+            const activeSlide = slides[currentIndex];
+            const activeImage = activeSlide?.querySelector('img');
+            const activeCaption = activeSlide?.querySelector('.gallery-caption')?.textContent?.trim() || '';
+
+            if (!activeImage || !fullscreenOverlay || !fullscreenImage || !fullscreenCaption) return;
+
+            fullscreenImage.src = activeImage.src;
+            fullscreenImage.alt = activeImage.alt;
+            fullscreenCaption.textContent = activeCaption;
+        }
+
+        function openFullscreen() {
+            updateFullscreenView();
+            fullscreenOverlay?.classList.add('active');
+            fullscreenOverlay?.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeFullscreen() {
+            fullscreenOverlay?.classList.remove('active');
+            fullscreenOverlay?.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+        }
+
+        fullscreenButton?.addEventListener('click', () => {
+            showSlide(currentIndex);
+            openFullscreen();
+        });
+        fullscreenClose?.addEventListener('click', closeFullscreen);
+        fullscreenPrev?.addEventListener('click', () => {
+            showSlide(currentIndex - 1);
+            updateFullscreenView();
+        });
+        fullscreenNext?.addEventListener('click', () => {
+            showSlide(currentIndex + 1);
+            updateFullscreenView();
+        });
+        fullscreenOverlay?.addEventListener('click', (event) => {
+            if (event.target === fullscreenOverlay) {
+                closeFullscreen();
+            }
+        });
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') {
+                closeFullscreen();
+            }
+        });
+
+        galleryStage?.addEventListener('touchstart', (event) => {
+            touchStartX = event.touches[0]?.clientX || 0;
+        }, { passive: true });
+
+        galleryStage?.addEventListener('touchend', (event) => {
+            const touchEndX = event.changedTouches[0]?.clientX || 0;
+            const deltaX = touchStartX - touchEndX;
+            if (Math.abs(deltaX) > 50) {
+                if (deltaX > 0) {
+                    showSlide(currentIndex + 1);
+                } else {
+                    showSlide(currentIndex - 1);
+                }
+                startAutoplay();
+            }
+        }, { passive: true });
+
+        prevButton?.addEventListener('click', () => {
+            showSlide(currentIndex - 1);
+            startAutoplay();
+        });
+        nextButton?.addEventListener('click', () => {
+            showSlide(currentIndex + 1);
+            startAutoplay();
+        });
+
+        showSlide(0);
+        startAutoplay();
+    });
+
+    (function () {
+        fetch('announcements.json').then(r => r.ok ? r.json() : []).catch(() => []).then(items => {
+            if (!Array.isArray(items) || !items.length) return;
+            const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+            document.getElementById('noAnnouncements').hidden = true;
+            document.getElementById('announcementList').innerHTML = items.slice().reverse().map(a => {
+                const d = a.created_at ? new Date(a.created_at) : null;
+                const date = d && !isNaN(d) ? d.toLocaleDateString('en-US', {year:'numeric', month:'long', day:'numeric'}) : '';
+                return '<div class="list-item"><h3>' + esc(a.title) + '</h3><p>' + esc(a.message).replace(/\n/g, '<br>') + '</p><small style="color:#6b7280; display:block; margin-top:8px;">Posted by ADMIN' + (date ? ' on ' + esc(date) : '') + '</small></div>';
+            }).join('');
+        });
+    })();
+    </script>
+</body>
+</html>
