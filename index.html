@@ -1,0 +1,657 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Explore programmes and admissions at Munali Hills College of Biotechnology in Lusaka, Zambia.">
+    <meta name="theme-color" content="#0b3e83">
+    <title>Munali Hills College of Biotechnology</title>
+    <link rel="icon" href="img/logo%204k.webp" type="image/webp">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="site-theme.css">
+    <script src="site-theme.js" defer></script>
+    <style>
+        :root {
+            color-scheme: light;
+            --paper: #fff;
+            --wash: #f2f7fa;
+            --ink: #142232;
+            --muted: #596a7c;
+            --rule: #d3dee8;
+            --blue: #0b3e83;
+            --blue-deep: #09284e;
+            --cyan: #27b8d0;
+            --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+            --sans: "Source Sans 3", "Segoe UI", Arial, sans-serif;
+        }
+        html[data-theme="dark"] {
+            color-scheme: dark;
+            --paper: #101b2a;
+            --wash: #172538;
+            --ink: #e7eef7;
+            --muted: #b2c0d0;
+            --rule: #34465b;
+            --blue-deep: #071321;
+        }
+        * { box-sizing: border-box; }
+        html { scroll-behavior: smooth; scroll-padding-top: 92px; }
+        body { margin: 0; color: var(--ink); background: var(--paper); font: 17px/1.6 var(--sans); }
+        a { color: inherit; }
+        button, input, select, textarea { font: inherit; }
+        :focus-visible { outline: 3px solid var(--cyan); outline-offset: 3px; }
+        .wrap { width: min(1160px, calc(100% - 40px)); margin-inline: auto; }
+        .full { margin-inline: calc(50% - 50vw); padding-inline: max(20px, calc((100vw - 1160px) / 2)); }
+        .utility { color: #eef5fc; background: var(--blue-deep); font-size: 13px; }
+        .utility-inner { min-height: 36px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+        .utility-links { display: flex; flex-wrap: wrap; gap: 22px; }
+        .utility a { text-decoration: none; opacity: .88; }
+        .utility a:hover { opacity: 1; text-decoration: underline; }
+        .masthead { position: sticky; top: 0; z-index: 20; background: var(--paper); border-bottom: 1px solid var(--rule); }
+        .masthead-inner { min-height: 92px; display: flex; align-items: center; justify-content: space-between; gap: 22px; }
+        .theme-toggle { flex: 0 0 auto; display: inline-flex; align-items: center; justify-content: center; gap: 7px; min-height: 40px; padding: 8px 11px; border: 1px solid var(--rule); background: var(--paper); color: var(--ink); cursor: pointer; font-size: 14px; font-weight: 600; }
+        .theme-toggle:hover { border-color: var(--cyan); }
+        .theme-toggle-icon { font-size: 18px; line-height: 1; }
+        .brand { display: flex; align-items: center; gap: 13px; min-width: 0; text-decoration: none; }
+        .brand img { display: block; width: 58px; height: 58px; object-fit: contain; flex: 0 0 auto; }
+        .brand-name { font: 700 21px/1.08 var(--serif); }
+        .brand-name small { display: block; margin-top: 5px; color: var(--muted); font: 600 11px/1.2 var(--sans); letter-spacing: .13em; text-transform: uppercase; }
+        .main-nav { display: flex; align-items: center; gap: 25px; }
+        .main-nav a { padding: 7px 0; border-bottom: 2px solid transparent; text-decoration: none; font-size: 15px; font-weight: 600; }
+        .main-nav a:hover { border-bottom-color: var(--cyan); }
+        .main-nav .apply-link { padding: 10px 17px; border: 1px solid var(--blue); color: #fff; background: var(--blue); }
+        .main-nav .apply-link:hover { border-color: var(--blue-deep); background: var(--blue-deep); }
+        .menu-toggle { display: none; border: 1px solid var(--rule); background: var(--paper); color: var(--ink); padding: 8px 11px; cursor: pointer; }
+        .hero { position: relative; min-height: 570px; isolation: isolate; display: flex; align-items: center; color: #fff; background: var(--blue); overflow: hidden; }
+        .hero::before { position: absolute; z-index: -2; inset: 0; content: ""; background: url("img/gradyating%20students.webp") center 43% / cover no-repeat; }
+        .hero::after { position: absolute; z-index: -1; inset: 0; content: ""; background: linear-gradient(90deg, rgba(5, 34, 72, .9), rgba(7, 53, 107, .72) 52%, rgba(8, 37, 74, .2)); }
+        .hero-copy { max-width: 720px; padding-block: 76px 88px; animation: enter .65s ease-out both; }
+        .eyebrow { margin: 0; color: var(--cyan); font-size: 13px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+        .hero .eyebrow { color: #a5f2fb; }
+        h1, h2, h3 { margin: 0; font-family: var(--serif); font-weight: 600; line-height: 1.12; text-wrap: balance; }
+        h1 { max-width: 14ch; margin-top: 16px; font-size: clamp(42px, 6vw, 72px); }
+        .hero-copy > p:not(.eyebrow) { max-width: 52ch; margin: 22px 0 0; color: #e6edf6; font-size: 20px; }
+        .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+        .button { display: inline-flex; min-height: 46px; align-items: center; justify-content: center; padding: 10px 20px; border: 1px solid var(--cyan); background: var(--cyan); color: #072846; text-decoration: none; font-weight: 700; }
+        .button:hover { background: #8be5ee; border-color: #8be5ee; }
+        .button-outline { border-color: #fff; background: transparent; color: #fff; }
+        .button-outline:hover { color: var(--blue-deep); background: #fff; border-color: #fff; }
+        .quick-strip { background: var(--wash); border-bottom: 1px solid var(--rule); }
+        .quick-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+        .quick-grid a { display: block; padding: 19px 16px; border-left: 1px solid var(--rule); text-decoration: none; }
+        .quick-grid a:first-child { border-left: 0; padding-left: 0; }
+        .quick-grid b { display: block; font: 600 19px/1.2 var(--serif); }
+        .quick-grid span { display: block; margin-top: 3px; color: var(--muted); font-size: 14px; }
+        .quick-grid a:hover b { color: var(--blue); text-decoration: underline; text-underline-offset: 3px; }
+        .section { padding-top: 82px; }
+        .section-heading { display: grid; grid-template-columns: 1fr 1fr; align-items: end; gap: 28px; padding-bottom: 18px; border-bottom: 2px solid var(--ink); }
+        .section-heading h2 { margin-top: 8px; font-size: clamp(32px, 4vw, 45px); }
+        .section-heading > p { justify-self: end; max-width: 50ch; color: var(--muted); }
+        .filter-list { display: flex; flex-wrap: wrap; gap: 8px 24px; padding-block: 14px; border-bottom: 1px solid var(--rule); }
+        .filter-button { padding: 5px 0; border: 0; border-bottom: 2px solid transparent; background: none; color: var(--muted); cursor: pointer; font-weight: 600; }
+        .filter-button[aria-pressed="true"] { color: var(--ink); border-bottom-color: var(--blue); }
+        .program-head, .program-row { display: grid; grid-template-columns: minmax(0, 1.8fr) minmax(0, 1fr) auto; align-items: baseline; gap: 24px; }
+        .program-head { padding-block: 11px; color: var(--muted); font-size: 12px; font-weight: 700; letter-spacing: .11em; text-transform: uppercase; }
+        .program-row { padding-block: 19px; border-top: 1px solid var(--rule); }
+        .program-row h3 { font-size: 21px; }
+        .program-row p { max-width: 62ch; margin-top: 4px; color: var(--muted); font-size: 15px; }
+        .program-row .field { color: var(--muted); font-size: 15px; }
+        .program-row[hidden] { display: none !important; }
+        .text-link { color: var(--blue); font-weight: 700; text-decoration-thickness: 1px; text-underline-offset: 3px; white-space: nowrap; }
+        .section-intro { max-width: 68ch; margin: 18px 0 0; color: var(--muted); }
+        .about-grid, .support-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; padding-top: 24px; }
+        .support-grid { grid-template-columns: 1fr; }
+        .info-card { padding: 22px; border: 1px solid var(--rule); background: var(--paper); }
+        .info-card h3 { margin-bottom: 9px; color: var(--blue); font-size: 21px; }
+        .info-card p { margin: 0; color: var(--muted); }
+        .values-list { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 16px; }
+        .values-list span { padding: 6px 11px; border: 1px solid var(--rule); color: var(--blue-deep); background: var(--wash); font-size: 14px; font-weight: 600; }
+        .admissions-checklist { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 28px; margin-top: 30px; padding: 22px; border: 1px solid var(--rule); background: var(--paper); }
+        .admissions-checklist h3 { grid-column: 1 / -1; font-size: 21px; }
+        .admissions-checklist ul { margin: 0; padding-left: 22px; color: var(--muted); }
+        .gallery-slider { position: relative; margin-top: 28px; overflow: hidden; border: 1px solid var(--rule); background: var(--wash); }
+        .gallery-stage { position: relative; min-height: 420px; overflow: hidden; background: #071a31; }
+        .gallery-slide { position: absolute; inset: 0; opacity: 0; pointer-events: none; transition: opacity .5s ease; }
+        .gallery-slide.active { opacity: 1; pointer-events: auto; }
+        .gallery-slide img { display: block; width: 100%; height: 420px; object-fit: contain; }
+        .gallery-caption { position: absolute; right: 0; bottom: 0; left: 0; padding: 12px 16px; color: #fff; background: linear-gradient(transparent, rgba(5, 27, 52, .88)); font-weight: 700; }
+        .gallery-slider button { cursor: pointer; }
+        .gallery-fullscreen, .gallery-nav { position: absolute; z-index: 2; display: grid; place-items: center; border: 0; border-radius: 50%; color: #fff; background: rgba(9, 40, 78, .8); }
+        .gallery-fullscreen { top: 14px; right: 14px; width: 42px; height: 42px; font-size: 20px; }
+        .gallery-nav { top: 50%; width: 44px; height: 44px; transform: translateY(-50%); font-size: 20px; }
+        .gallery-prev { left: 14px; }
+        .gallery-next { right: 14px; }
+        .gallery-fullscreen-overlay { position: fixed; z-index: 100; inset: 0; display: none; align-items: center; justify-content: center; padding: 24px; background: rgba(2, 6, 23, .94); }
+        .gallery-fullscreen-overlay.active { display: flex; }
+        .gallery-fullscreen-panel { width: min(100%, 1100px); text-align: center; }
+        .gallery-fullscreen-image { display: block; width: 100%; max-height: 78vh; object-fit: contain; }
+        .gallery-fullscreen-caption { margin-top: 12px; color: #fff; font-weight: 700; }
+        .gallery-fullscreen-close, .gallery-fullscreen-nav { position: absolute; z-index: 1; display: grid; place-items: center; width: 44px; height: 44px; border: 1px solid rgba(255,255,255,.4); border-radius: 50%; color: #fff; background: rgba(255,255,255,.14); font-size: 24px; }
+        .gallery-fullscreen-close { top: 18px; right: 18px; }
+        .gallery-fullscreen-nav { top: 50%; transform: translateY(-50%); }
+        .gallery-fullscreen-prev { left: 18px; }
+        .gallery-fullscreen-next { right: 18px; }
+        .gallery-dots { display: flex; justify-content: center; gap: 8px; margin-top: 14px; }
+        .gallery-dot { width: 10px; height: 10px; padding: 0; border: 0; border-radius: 50%; background: #b8c6d4; }
+        .gallery-dot.active { background: var(--blue); }
+        .news-list { display: grid; gap: 14px; }
+        .contact-details { display: grid; gap: 8px; margin-top: 16px; color: #eff5fc; }
+        .contact-details a { text-underline-offset: 3px; }
+        .contact-map { width: 100%; min-height: 300px; border: 0; }
+        .admissions { margin-top: 82px; background: var(--wash); border-block: 1px solid var(--rule); }
+        .admissions-inner { display: grid; grid-template-columns: minmax(0, .9fr) minmax(0, 1.3fr); gap: 70px; padding-block: 72px; }
+        .admissions h2 { margin-top: 8px; font-size: clamp(32px, 4vw, 45px); }
+        .admissions-intro { max-width: 40ch; margin-top: 17px; color: var(--muted); }
+        .admissions .button { margin-top: 24px; }
+        .steps { margin: 0; padding: 0; list-style: none; counter-reset: step; }
+        .steps li { display: grid; grid-template-columns: 48px 1fr; gap: 10px; padding-block: 18px; border-top: 1px solid var(--rule); counter-increment: step; }
+        .steps li:first-child { border-top: 2px solid var(--ink); }
+        .steps li::before { content: counter(step, decimal-leading-zero); color: var(--blue); font: 600 25px/1.2 var(--serif); }
+        .steps h3 { font-size: 20px; }
+        .steps p { margin-top: 4px; color: var(--muted); font-size: 15px; }
+        .news-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 54px; padding-top: 28px; }
+        .feature-news { position: relative; min-height: 325px; display: flex; align-items: end; overflow: hidden; color: white; background: var(--blue); }
+        .feature-news img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+        .feature-news::after { position: absolute; inset: 35% 0 0; content: ""; background: linear-gradient(transparent, rgba(5, 27, 52, .88)); }
+        .feature-news-copy { position: relative; z-index: 1; padding: 25px; }
+        .feature-news h3 { margin-top: 8px; font-size: 28px; }
+        .events { border-top: 2px solid var(--ink); }
+        .event { padding-block: 17px; border-bottom: 1px solid var(--rule); }
+        .event time { color: var(--blue); font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+        .event h3 { margin-top: 5px; font-size: 19px; }
+        .event p { margin-top: 5px; color: var(--muted); font-size: 14px; }
+        .contact-band { margin-top: 82px; color: #eff5fc; background: var(--blue-deep); }
+        .contact-inner { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 30px; padding-block: 54px; }
+        .contact-inner h2 { margin-top: 7px; font-size: 36px; }
+        .contact-inner p { margin-top: 8px; color: #c7d7e8; }
+        .contact-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+        .contact-actions .button-outline { border-color: #c7d7e8; }
+        html[data-theme="dark"] .quick-grid a,
+        html[data-theme="dark"] .filter-button { color: var(--ink); }
+        html[data-theme="dark"] .info-card,
+        html[data-theme="dark"] .admissions-checklist { color: var(--ink); }
+        html[data-theme="dark"] .info-card h3 { color: #8dccff; }
+        html[data-theme="dark"] .values-list span { color: #d8ebff; }
+        html[data-theme="dark"] .text-link { color: #8dccff; }
+        html[data-theme="dark"] .event time { color: #8dccff; }
+        html[data-theme="dark"] .filter-button[aria-pressed="true"] { border-bottom-color: #8dccff; }
+        html[data-theme="dark"] .gallery-dot.active { background: #8dccff; }
+        @keyframes enter { from { opacity: 0; transform: translateY(13px); } to { opacity: 1; transform: translateY(0); } }
+        @media (max-width: 900px) {
+            .main-nav { gap: 14px; }
+            .main-nav a { font-size: 14px; }
+            .admissions-inner { gap: 38px; }
+        }
+        @media (max-width: 1100px) {
+            .utility .secondary-links { display: none; }
+            .masthead-inner { position: relative; flex-wrap: wrap; gap: 8px; padding-block: 9px; }
+            .brand { flex: 1 1 auto; min-width: 0; gap: 7px; }
+            .theme-toggle { width: 40px; min-width: 40px; padding: 7px; }
+            .theme-toggle-label { display: none; }
+            .menu-toggle { display: inline-flex; flex: 0 0 auto; align-items: center; gap: 5px; padding: 7px 8px; font-size: 13px; }
+            .main-nav { display: none; order: 4; width: 100%; align-items: stretch; flex-direction: column; gap: 0; padding-block: 8px 4px; }
+            .main-nav[data-open="true"] { display: flex; }
+            .main-nav a { display: block; padding: 11px 4px; border-bottom: 1px solid var(--rule); }
+            .main-nav .apply-link { margin-top: 10px; text-align: center; }
+        }
+        @media (max-width: 700px) {
+            .wrap { width: min(100% - 32px, 1160px); }
+            .full { padding-inline: 16px; }
+            .utility-inner { min-height: 34px; }
+            .utility-links { gap: 15px; }
+            .utility .secondary-links { display: none; }
+            .masthead-inner { min-height: 76px; flex-wrap: wrap; gap: 8px; padding-block: 9px; }
+            .brand { flex: 1 1 auto; gap: 7px; }
+            .brand img { width: 40px; height: 40px; }
+            .brand-name { font-size: 15px; }
+            .brand-name small { font-size: 9px; }
+            .theme-toggle { width: 40px; min-width: 40px; padding: 7px; }
+            .theme-toggle-label { display: none; }
+            .menu-toggle { display: inline-flex; flex: 0 0 auto; align-items: center; gap: 5px; padding: 7px 8px; font-size: 13px; }
+            .main-nav { display: none; order: 3; width: 100%; align-items: stretch; flex-direction: column; gap: 0; padding-block: 8px 4px; }
+            .main-nav[data-open="true"] { display: flex; }
+            .main-nav a, .main-nav a:not(.apply-link) { display: block; padding: 11px 4px; border-bottom: 1px solid var(--rule); }
+            .main-nav .apply-link { margin-top: 10px; text-align: center; }
+            .hero { min-height: 510px; }
+            .hero::before { background-position: 56% center; }
+            .hero-copy { padding-block: 60px 70px; }
+            .hero-copy > p:not(.eyebrow) { font-size: 18px; }
+            .quick-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .quick-grid a { padding: 15px 10px; border-top: 1px solid var(--rule); }
+            .quick-grid a:nth-child(odd) { border-left: 0; padding-left: 0; }
+            .quick-grid a:nth-child(-n+2) { border-top: 0; }
+            .about-grid, .support-grid { grid-template-columns: 1fr; }
+            .admissions-checklist { grid-template-columns: 1fr; }
+            .gallery-stage { min-height: 250px; }
+            .gallery-slide img { height: 250px; }
+            .gallery-dots { display: none; }
+            .gallery-fullscreen-nav { width: 38px; height: 38px; }
+            .gallery-fullscreen-prev { left: 8px; }
+            .gallery-fullscreen-next { right: 8px; }
+            .section { padding-top: 60px; }
+            .section-heading { grid-template-columns: 1fr; gap: 12px; }
+            .section-heading > p { justify-self: start; }
+            .program-head { display: none; }
+            .program-row { grid-template-columns: minmax(0, 1fr) auto; gap: 8px 14px; }
+            .program-row > div:first-child { grid-column: 1 / -1; }
+            .program-row .field { font-size: 13px; }
+            .admissions { margin-top: 60px; }
+            .admissions-inner { grid-template-columns: 1fr; gap: 34px; padding-block: 54px; }
+            .news-grid { grid-template-columns: 1fr; gap: 28px; }
+            .feature-news { min-height: 270px; }
+            .contact-band { margin-top: 60px; }
+            .contact-inner { grid-template-columns: 1fr; padding-block: 42px; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+        }
+    </style>
+</head>
+<body>
+    <div class="utility full">
+        <div class="wrap utility-inner">
+            <div class="utility-links"><a href="signup.html">Apply online</a><a href="#programmes">Programmes</a><a href="#contact">Visit / contact</a></div>
+            <div class="utility-links secondary-links"><a href="login.html">Student portal</a><a href="admin_login.html">Staff login</a></div>
+        </div>
+    </div>
+    <header class="masthead full">
+        <div class="wrap masthead-inner">
+            <button class="theme-toggle" id="themeToggle" data-theme-toggle type="button" aria-label="Switch to dark mode" aria-pressed="false" title="Switch to dark mode"><span class="theme-toggle-icon" aria-hidden="true">☾</span><span class="theme-toggle-label">Dark mode</span></button>
+            <a class="brand" href="index.html" aria-label="Munali Hills College home">
+                <img src="img/logo%204k.webp" alt="Munali Hills College crest">
+                <span class="brand-name">Munali Hills College<small>of Biotechnology · Lusaka, Zambia</small></span>
+            </a>
+            <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="mainNav"><span aria-hidden="true">☰</span> Menu</button>
+            <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+                <a href="#programmes">Programmes</a>
+                <a href="#admissions">Admissions</a>
+                <a href="#news">News &amp; events</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+                <a class="apply-link" href="signup.html">Apply now</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="top">
+        <section class="hero full" aria-labelledby="heroTitle">
+            <div class="wrap"><div class="hero-copy">
+                <p class="eyebrow">Practical learning · Lusaka, Zambia</p>
+                <h1 id="heroTitle">Munali Hills College of Biotechnology</h1>
+                <p>Creating new knowledge through applied study, practical training and a supportive college community.</p>
+                <div class="hero-actions"><a class="button" href="signup.html">Start your application</a><a class="button button-outline" href="#programmes">Explore programmes</a></div>
+            </div></div>
+        </section>
+
+        <section class="quick-strip full" aria-label="Quick links"><div class="wrap quick-grid">
+            <a href="signup.html"><b>Apply online</b><span>Start a new application</span></a>
+            <a href="#programmes"><b>Programme guide</b><span>Explore study options</span></a>
+            <a href="#admissions"><b>Admissions</b><span>Requirements and steps</span></a>
+            <a href="login.html"><b>Student portal</b><span>Sign in to your account</span></a>
+        </div></section>
+
+        <section class="section wrap" id="about">
+            <div class="section-heading"><div><p class="eyebrow">About the college</p><h2>Learning with purpose</h2></div><p>Munali Hills College of Biotechnology empowers students through quality education and practical experience in Lusaka, Zambia.</p></div>
+            <div class="about-grid">
+                <article class="info-card"><h3>Our mission</h3><p>To innovate, preserve, and disseminate knowledge while promoting a culture of broad inquiry throughout and beyond the MHC community.</p></article>
+                <article class="info-card"><h3>Our vision</h3><p>To be a widely recognised innovative college with global impact.</p></article>
+                <article class="info-card"><h3>Our values</h3><p>We provide accessible education while maintaining high standards of academic and professional excellence.</p><div class="values-list"><span>Excellence</span><span>Integrity</span><span>Relevance</span><span>Innovation</span><span>Inclusivity</span></div></article>
+            </div>
+            <article class="info-card" style="margin-top:18px;"><h3>Accreditation &amp; recognition</h3><p>Munali Hills College of Biotechnology is accredited by the Higher Education Board and TEVETA (Technical Education, Vocational and Entrepreneurship Training Authority). Diploma and short-course programmes are eligible for CDF (Constituency Development Fund) sponsorship.</p></article>
+        </section>
+
+        <section class="section wrap" id="programmes">
+            <div class="section-heading"><div><p class="eyebrow">Academics</p><h2>Find your programme</h2></div><p>Explore the college’s practical learning pathways. Contact Admissions for current entry requirements, fees and intake availability.</p></div>
+            <div class="filter-list" role="group" aria-label="Filter programmes">
+                <button class="filter-button" type="button" data-filter="all" aria-pressed="true">All programmes</button>
+                <button class="filter-button" type="button" data-filter="science" aria-pressed="false">Science &amp; health</button>
+                <button class="filter-button" type="button" data-filter="technology" aria-pressed="false">Technology</button>
+                <button class="filter-button" type="button" data-filter="business" aria-pressed="false">Business</button>
+                <button class="filter-button" type="button" data-filter="agriculture" aria-pressed="false">Agriculture</button>
+            </div>
+            <div class="program-head" aria-hidden="true"><span>Programme</span><span>Study area</span><span>Explore</span></div>
+            <div id="programmeList">
+                <article class="program-row" data-category="science"><div><h3>Biotechnology</h3><p>Core science and applied biotechnology training with lab-based projects, practical assessments, and career-ready preparation.</p></div><div class="field">Molecular biology, microbiology, research methods</div><a class="text-link" href="#admissions">Apply</a></article>
+                <article class="program-row" data-category="science"><div><h3>Laboratory Practice</h3><p>Hands-on practical training in scientific and medical labs, with emphasis on safety, sample handling, and quality control.</p></div><div class="field">Clinical routines, lab techniques, technical reporting</div><a class="text-link" href="#admissions">Apply</a></article>
+                <article class="program-row" data-category="science"><div><h3>Health Sciences</h3><p>Preparation for healthcare and allied science pathways with strong foundations in patient care, anatomy, and health systems.</p></div><div class="field">Public health, health support, community service</div><a class="text-link" href="#admissions">Apply</a></article>
+                <article class="program-row" data-category="technology"><div><h3>Information Technology</h3><p>A practical pathway for students interested in digital systems, support services, and modern office technology.</p></div><div class="field">Computing fundamentals, networking, digital literacy</div><a class="text-link" href="#admissions">Apply</a></article>
+                <article class="program-row" data-category="business"><div><h3>Business &amp; Entrepreneurship</h3><p>Skills for planning, managing, and growing small enterprises with a strong foundation in communication and operations.</p></div><div class="field">Entrepreneurship, teamwork, business planning</div><a class="text-link" href="#admissions">Apply</a></article>
+                <article class="program-row" data-category="agriculture"><div><h3>Agriculture &amp; Food Science</h3><p>Applied study for students interested in food production, sustainability, and practical agricultural systems.</p></div><div class="field">Crop science, food safety, sustainable practices</div><a class="text-link" href="#admissions">Apply</a></article>
+            </div>
+        </section>
+
+        <section class="admissions full" id="admissions"><div class="wrap admissions-inner">
+            <div><p class="eyebrow">Admissions</p><h2>Your next step starts here</h2><p class="admissions-intro">Prepare your academic documents and identification, then complete the online application. The admissions team will review your submission and contact you about the next steps.</p><a class="button" href="signup.html">Apply online</a></div>
+            <ol class="steps">
+                <li><div><h3>Choose a programme</h3><p>Review the available study pathways and select your programme of interest.</p></div></li>
+                <li><div><h3>Complete the application</h3><p>Provide your details and upload the requested supporting documents.</p></div></li>
+                <li><div><h3>Pay the application fee and wait for review</h3><p>You will receive an email confirmation. Admissions staff will review your application and contact you with the decision.</p></div></li>
+                <li><div><h3>Register after approval</h3><p>Complete both physical and online registration after your application is approved.</p></div></li>
+            </ol>
+            <div class="admissions-checklist">
+                <h3>Before you apply</h3>
+                <ul><li>Choose your programme of interest.</li><li>Prepare your academic documents and identification.</li></ul>
+                <ul><li>Complete the online application and submit the requested documents.</li><li>Pay the application fee and check your email for confirmation.</li></ul>
+            </div>
+        </div></section>
+
+        <section class="section wrap" id="news">
+            <div class="section-heading"><div><p class="eyebrow">College life</p><h2>News &amp; announcements</h2></div><p>College notices and community updates for applicants, students and staff, alongside moments from campus life.</p></div>
+            <div class="news-grid">
+                <article class="feature-news"><img src="img/gradyating%20students%20(1).webp" alt="Munali Hills College graduates celebrating"><div class="feature-news-copy"><p class="eyebrow">Munali Hills College</p><h3>Learning, practical experience and a community to grow with</h3></div></article>
+                <div class="events news-list" id="announcementList">
+                    <article class="event"><time>College information</time><h3>Explore admissions and student support</h3><p>See the admissions information above or contact the college team with questions.</p></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section wrap" id="gallery">
+            <div class="section-heading"><div><p class="eyebrow">Campus life</p><h2>Event gallery</h2></div><p>Graduation, student activities, and special community events at Munali Hills College.</p></div>
+            <div class="gallery-slider" aria-label="Campus event gallery">
+                <button type="button" class="gallery-fullscreen" aria-label="View image full screen">⤢</button>
+                <button type="button" class="gallery-nav gallery-prev" aria-label="Previous image">&#10094;</button>
+                <div class="gallery-stage">
+                    <div class="gallery-slide active" aria-hidden="false">
+                            <img src="img/gradyating%20students.webp" alt="Graduation celebration at Munali Hills College" loading="eager" decoding="async">
+                            <div class="gallery-caption">Graduation Celebration</div>
+                        </div>
+                        <div class="gallery-slide" aria-hidden="true">
+                            <img src="img/student%202.webp" alt="Students participating in a campus event" loading="eager" decoding="async">
+                            <div class="gallery-caption">Student Engagement</div>
+                        </div>
+                        <div class="gallery-slide" aria-hidden="true">
+                            <img src="img/11.webp" alt="College event activity with students and staff" loading="lazy" decoding="async">
+                            <div class="gallery-caption">Campus Event</div>
+                        </div>
+                        <div class="gallery-slide" aria-hidden="true">
+                            <img src="img/principle.webp" alt="Students gathered for a college program" loading="lazy" decoding="async">
+                            <div class="gallery-caption">Community Programs</div>
+                        </div>
+                        <div class="gallery-slide" aria-hidden="true">
+                            <img src="img/gradyating%20students%20%281%29.webp" alt="Graduating students posing together after the ceremony" loading="lazy" decoding="async">
+                            <div class="gallery-caption">Graduating Class</div>
+                        </div>
+                        <div class="gallery-slide" aria-hidden="true">
+                            <img src="img/student%205.webp" alt="Student life and engagement at the college" loading="lazy" decoding="async">
+                            <div class="gallery-caption">Student Life</div>
+                        </div>
+                        <div class="gallery-slide" aria-hidden="true">
+                            <img src="img/dcs.webp" alt="Special college event and community engagement" loading="lazy" decoding="async">
+                            <div class="gallery-caption">Special Occasion</div>
+                        </div>
+                        <div class="gallery-slide" aria-hidden="true">
+                            <img src="img/FB_IMG_1773737761592.webp" alt="Campus event photo from the college gallery" loading="lazy" decoding="async">
+                            <div class="gallery-caption">Campus Memories</div>
+                        </div>
+                        <div class="gallery-slide" aria-hidden="true">
+                            <img src="img/FB_IMG_1782737969540.jpg" alt="Another campus event photo from the gallery" loading="lazy" decoding="async">
+                            <div class="gallery-caption">College Activities</div>
+                        </div>
+                        <div class="gallery-slide" aria-hidden="true">
+                            <img src="img/FB_IMG_1782737972301.jpg" alt="Practical learning and student activity image" loading="lazy" decoding="async">
+                            <div class="gallery-caption">Practical Learning</div>
+                        </div>
+                        <div class="gallery-slide" aria-hidden="true">
+                            <img src="img/FB_IMG_1782737975433.jpg" alt="Students in a practical or event setting" loading="lazy" decoding="async">
+                            <div class="gallery-caption">Student Participation</div>
+                        </div>
+                        <div class="gallery-slide" aria-hidden="true">
+                            <img src="img/gs1.webp" alt="A memorable campus event snapshot" loading="lazy" decoding="async">
+                            <div class="gallery-caption">Campus Highlights</div>
+                        </div>
+                        <div class="gallery-slide" aria-hidden="true">
+                            <img src="img/1.jpg" alt="Campus gallery image 1" loading="lazy" decoding="async">
+                            <div class="gallery-caption">Campus Image 1</div>
+                        </div>
+                        <div class="gallery-slide" aria-hidden="true">
+                            <img src="img/2.jpg" alt="Campus gallery image 2" loading="lazy" decoding="async">
+                            <div class="gallery-caption">Campus Image 2</div>
+                        </div>
+                        <div class="gallery-slide" aria-hidden="true">
+                            <img src="img/3.jpg" alt="Campus gallery image 3" loading="lazy" decoding="async">
+                            <div class="gallery-caption">Campus Image 3</div>
+                        </div>
+                        <div class="gallery-slide" aria-hidden="true">
+                            <img src="img/4.jpg" alt="Campus gallery image 4" loading="lazy" decoding="async">
+                            <div class="gallery-caption">Campus Image 4</div>
+                        </div>
+                        <div class="gallery-slide" aria-hidden="true">
+                            <img src="img/5.jpg" alt="Campus gallery image 5" loading="lazy" decoding="async">
+                            <div class="gallery-caption">Campus Image 5</div>
+                        </div>
+                        <div class="gallery-slide" aria-hidden="true">
+                            <img src="img/6.jpg" alt="Campus gallery image 6" loading="lazy" decoding="async">
+                            <div class="gallery-caption">Campus Image 6</div>
+                        </div>
+                        <div class="gallery-slide" aria-hidden="true">
+                            <img src="img/7.jpg" alt="Campus gallery image 7" loading="lazy" decoding="async">
+                            <div class="gallery-caption">Campus Image 7</div>
+                        </div>
+                        <div class="gallery-slide" aria-hidden="true">
+                            <img src="img/8.jpg" alt="Campus gallery image 8" loading="lazy" decoding="async">
+                            <div class="gallery-caption">Campus Image 8</div>
+                        </div>
+                        <div class="gallery-slide" aria-hidden="true">
+                            <img src="img/9.jpg" alt="Campus gallery image 9" loading="lazy" decoding="async">
+                            <div class="gallery-caption">Campus Image 9</div>
+                        </div>
+                        <div class="gallery-slide" aria-hidden="true">
+                            <img src="img/10.jpg" alt="Campus gallery image 10" loading="lazy" decoding="async">
+                            <div class="gallery-caption">Campus Image 10</div>
+                        </div>
+                        <div class="gallery-slide" aria-hidden="true">
+                            <img src="img/11.jpg" alt="Campus gallery image 11" loading="lazy" decoding="async">
+                            <div class="gallery-caption">Campus Image 11</div>
+                        </div>
+                        <div class="gallery-slide" aria-hidden="true">
+                            <img src="img/12.jpg" alt="Campus gallery image 12" loading="lazy" decoding="async">
+                            <div class="gallery-caption">Campus Image 12</div>
+                        </div>
+                        <div class="gallery-slide" aria-hidden="true">
+                            <img src="img/13.jpg" alt="Campus gallery image 13" loading="lazy" decoding="async">
+                            <div class="gallery-caption">Campus Image 13</div>
+                        </div>
+                        <div class="gallery-slide" aria-hidden="true">
+                            <img src="img/14.jpg" alt="Campus gallery image 14" loading="lazy" decoding="async">
+                            <div class="gallery-caption">Campus Image 14</div>
+                        </div>
+                        <div class="gallery-slide" aria-hidden="true">
+                            <img src="img/16.jpg" alt="Campus gallery image 16" loading="lazy" decoding="async">
+                            <div class="gallery-caption">Campus Image 16</div>
+                        </div>
+                        <div class="gallery-slide" aria-hidden="true">
+                            <img src="img/17.jpg" alt="Campus gallery image 17" loading="lazy" decoding="async">
+                            <div class="gallery-caption">Campus Image 17</div>
+                        </div>
+                        <div class="gallery-slide" aria-hidden="true">
+                            <img src="img/18.jpg" alt="Campus gallery image 18" loading="lazy" decoding="async">
+                            <div class="gallery-caption">Campus Image 18</div>
+                        </div>
+                        <div class="gallery-slide" aria-hidden="true">
+                            <img src="img/19.jpg" alt="Campus gallery image 19" loading="lazy" decoding="async">
+                            <div class="gallery-caption">Campus Image 19</div>
+                        </div>
+                        <div class="gallery-slide" aria-hidden="true">
+                            <img src="img/20.jpg" alt="Campus gallery image 20" loading="lazy" decoding="async">
+                            <div class="gallery-caption">Campus Image 20</div>
+                        </div>
+                        <div class="gallery-slide" aria-hidden="true">
+                            <img src="img/21.jpg" alt="Campus gallery image 21" loading="lazy" decoding="async">
+                            <div class="gallery-caption">Campus Image 21</div>
+                        </div>
+                        <div class="gallery-slide" aria-hidden="true">
+                            <img src="img/22.jpg" alt="Campus gallery image 22" loading="lazy" decoding="async">
+                            <div class="gallery-caption">Campus Image 22</div>
+                        </div>
+                        <div class="gallery-slide" aria-hidden="true">
+                            <img src="img/23.jpg" alt="Campus gallery image 23" loading="lazy" decoding="async">
+                            <div class="gallery-caption">Campus Image 23</div>
+                        </div>
+                        <div class="gallery-slide" aria-hidden="true">
+                            <img src="img/24.jpg" alt="Campus gallery image 24" loading="lazy" decoding="async">
+                            <div class="gallery-caption">Campus Image 24</div>
+                        </div>
+                        <div class="gallery-slide" aria-hidden="true">
+                            <img src="img/25.jpg" alt="Campus gallery image 25" loading="lazy" decoding="async">
+                            <div class="gallery-caption">Campus Image 25</div>
+                        </div>
+                        <div class="gallery-slide" aria-hidden="true">
+                            <img src="img/26.jpg" alt="Campus gallery image 26" loading="lazy" decoding="async">
+                            <div class="gallery-caption">Campus Image 26</div>
+                        </div>
+                        <div class="gallery-slide" aria-hidden="true">
+                            <img src="img/27.jpg" alt="Campus gallery image 27" loading="lazy" decoding="async">
+                            <div class="gallery-caption">Campus Image 27</div>
+                        </div>
+                </div>
+                <button type="button" class="gallery-nav gallery-next" aria-label="Next image">&#10095;</button>
+            </div>
+            <div class="gallery-dots" aria-label="Gallery slides"></div>
+        </section>
+
+        <section class="contact-band full" id="contact"><div class="wrap contact-inner">
+            <div><p class="eyebrow">Contact Munali Hills College</p><h2>Talk with our team</h2><p>Questions about admissions, programmes, academic help or portal issues? Contact the college support team.</p>
+            </div>
+            <div class="contact-actions"><a class="button" href="mailto:munalihills@gmail.com">Email admissions</a><a class="button button-outline" href="tel:+260978713023">Call the college</a>
+            </div>
+        </div>
+        <div class="wrap support-grid">
+            <iframe class="contact-map" id="location" title="Munali Hills College location map" loading="lazy" allowfullscreen src="https://www.google.com/maps?q=J5GC%2B64G,+Lusaka&output=embed"></iframe>
+        </div>
+        </section>
+    </main>
+
+    <div class="gallery-fullscreen-overlay" aria-hidden="true">
+        <button type="button" class="gallery-fullscreen-close" aria-label="Close full screen gallery">&times;</button>
+        <button type="button" class="gallery-fullscreen-nav gallery-fullscreen-prev" aria-label="Previous image">&#10094;</button>
+        <div class="gallery-fullscreen-panel"><img class="gallery-fullscreen-image" src="" alt=""><div class="gallery-fullscreen-caption"></div></div>
+        <button type="button" class="gallery-fullscreen-nav gallery-fullscreen-next" aria-label="Next image">&#10095;</button>
+    </div>
+
+    <footer class="mhc-public-footer">
+    <div class="mhc-public-footer-inner">
+        <p class="mhc-public-copyright">&copy; <span data-current-year>2026</span> Munali Hills College. All rights reserved.</p>
+        <a class="mhc-public-home" href="index.html">Back to Home</a>
+        <nav class="mhc-public-socials" aria-label="Contact and social media">
+            <a href="https://www.facebook.com/munalihills" target="_blank" rel="noopener noreferrer" aria-label="Facebook" title="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-8.2h2.8l.4-3.2h-3.2v-2c0-.9.3-1.6 1.6-1.6h1.7V3.1c-.3 0-1.3-.1-2.4-.1-2.4 0-4 1.5-4 4.2v2.4H7.7v3.2h2.7V21h3.1z"/></svg></a>
+            <a href="https://wa.me/260774069095" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" title="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a9.7 9.7 0 0 0-8.3 14.7L2.4 22l5.5-1.4A9.7 9.7 0 1 0 12 2zm0 17.7a8 8 0 0 1-4.1-1.1l-.3-.2-3.3.9.9-3.2-.2-.3A8 8 0 1 1 12 19.7zm4.4-6c-.2-.1-1.3-.7-1.5-.8-.2-.1-.4-.1-.5.1-.2.2-.6.8-.8.9-.1.2-.3.2-.5.1-.2-.1-.9-.3-1.8-1.1-.7-.6-1.1-1.3-1.3-1.5-.1-.2 0-.3.1-.5l.4-.4.2-.4c.1-.1 0-.3 0-.4l-.7-1.7c-.2-.4-.3-.4-.5-.4h-.4c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.2.9 2.4c.1.2 1.6 2.5 3.9 3.4.5.2.9.3 1.2.4.5.1.9.1 1.3.1.4-.1 1.3-.5 1.5-1 .2-.5.2-.9.2-1 0-.1-.2-.2-.4-.3z"/></svg></a>
+            <a href="mailto:munalihills@gmail.com" aria-label="Email Munali Hills College" title="Email"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zm9 7.2L20.4 7H3.6l8.4 5.2zm-9 4.9h18V8.8l-9 5.5-9-5.5v8.3z"/></svg></a>
+        </nav>
+    </div>
+</footer>
+<script>document.querySelectorAll('[data-current-year]').forEach(function(e){e.textContent=new Date().getFullYear();});</script>
+
+    <script>
+        const filterButtons = document.querySelectorAll('.filter-button');
+        const programmeRows = document.querySelectorAll('.program-row');
+        filterButtons.forEach((button) => button.addEventListener('click', () => {
+            const filter = button.dataset.filter;
+            filterButtons.forEach((item) => item.setAttribute('aria-pressed', String(item === button)));
+            programmeRows.forEach((row) => { row.hidden = filter !== 'all' && row.dataset.category !== filter; });
+        }));
+
+        const menuToggle = document.getElementById('menuToggle');
+        const mainNav = document.getElementById('mainNav');
+        menuToggle.addEventListener('click', () => {
+            const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+            menuToggle.setAttribute('aria-expanded', String(!expanded));
+            mainNav.dataset.open = String(!expanded);
+        });
+
+        const gallerySlides = Array.from(document.querySelectorAll('.gallery-slide'));
+        const galleryDotsContainer = document.querySelector('.gallery-dots');
+        const galleryOverlay = document.querySelector('.gallery-fullscreen-overlay');
+        const galleryFullscreenImage = document.querySelector('.gallery-fullscreen-image');
+        const galleryFullscreenCaption = document.querySelector('.gallery-fullscreen-caption');
+        let galleryIndex = 0;
+        let galleryAutoplay;
+
+        gallerySlides.forEach((slide, index) => {
+            const dot = document.createElement('button');
+            dot.type = 'button';
+            dot.className = 'gallery-dot';
+            dot.setAttribute('aria-label', `Go to gallery image ${index + 1}`);
+            dot.addEventListener('click', () => showGallerySlide(index));
+            galleryDotsContainer.appendChild(dot);
+        });
+
+        const galleryDots = Array.from(document.querySelectorAll('.gallery-dot'));
+        function showGallerySlide(index) {
+            galleryIndex = (index + gallerySlides.length) % gallerySlides.length;
+            gallerySlides.forEach((slide, slideIndex) => {
+                const active = slideIndex === galleryIndex;
+                slide.classList.toggle('active', active);
+                slide.setAttribute('aria-hidden', String(!active));
+                galleryDots[slideIndex].classList.toggle('active', active);
+            });
+        }
+
+        function restartGalleryAutoplay() {
+            window.clearInterval(galleryAutoplay);
+            if (!window.matchMedia('(max-width: 768px)').matches) {
+                galleryAutoplay = window.setInterval(() => showGallerySlide(galleryIndex + 1), 5000);
+            }
+        }
+
+        function updateGalleryFullscreen() {
+            const activeSlide = gallerySlides[galleryIndex];
+            const image = activeSlide.querySelector('img');
+            galleryFullscreenImage.src = image.currentSrc || image.src;
+            galleryFullscreenImage.alt = image.alt;
+            galleryFullscreenCaption.textContent = activeSlide.querySelector('.gallery-caption').textContent;
+        }
+
+        document.querySelector('.gallery-prev').addEventListener('click', () => {
+            showGallerySlide(galleryIndex - 1);
+            restartGalleryAutoplay();
+        });
+        document.querySelector('.gallery-next').addEventListener('click', () => {
+            showGallerySlide(galleryIndex + 1);
+            restartGalleryAutoplay();
+        });
+        document.querySelector('.gallery-fullscreen').addEventListener('click', () => {
+            updateGalleryFullscreen();
+            galleryOverlay.classList.add('active');
+            galleryOverlay.setAttribute('aria-hidden', 'false');
+            document.body.style.overflow = 'hidden';
+        });
+        document.querySelector('.gallery-fullscreen-close').addEventListener('click', closeGalleryFullscreen);
+        document.querySelector('.gallery-fullscreen-prev').addEventListener('click', () => {
+            showGallerySlide(galleryIndex - 1);
+            updateGalleryFullscreen();
+        });
+        document.querySelector('.gallery-fullscreen-next').addEventListener('click', () => {
+            showGallerySlide(galleryIndex + 1);
+            updateGalleryFullscreen();
+        });
+        galleryOverlay.addEventListener('click', (event) => {
+            if (event.target === galleryOverlay) closeGalleryFullscreen();
+        });
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && galleryOverlay.classList.contains('active')) closeGalleryFullscreen();
+        });
+
+        function closeGalleryFullscreen() {
+            galleryOverlay.classList.remove('active');
+            galleryOverlay.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+        }
+
+        showGallerySlide(0);
+        restartGalleryAutoplay();
+
+        fetch('announcements.json').then(r => r.ok ? r.json() : []).catch(() => []).then(items => {
+            if (!Array.isArray(items) || !items.length) return;
+            const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+            document.getElementById('announcementList').innerHTML = items.map(a => {
+                const d = a.created_at ? new Date(a.created_at) : null;
+                const date = d && !isNaN(d) ? d.toLocaleDateString('en-US', {year:'numeric', month:'long', day:'numeric'}) : 'College notice';
+                return '<article class="event"><time>' + esc(date) + '</time><h3>' + esc(a.title || 'Announcement') + '</h3><p>' + esc(a.message).replace(/\n/g, '<br>') + '</p><p>Posted by ADMIN</p></article>';
+            }).join('');
+        });
+    </script>
+</body>
+</html>

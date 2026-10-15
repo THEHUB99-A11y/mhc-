@@ -1,0 +1,80 @@
+/* Self-contained footer styles for .mhc-public-footer (used on every page) */
+.mhc-public-footer {
+    width: 100%;
+    margin-top: 60px;
+    padding: 0;
+    background: #09284e;
+    border-top: 3px solid #27b8d0;
+    color: #eef5fc;
+    font-family: "Source Sans 3", "Segoe UI", Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.mhc-public-footer-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px 24px;
+    width: min(1160px, calc(100% - 40px));
+    margin-inline: auto;
+    padding-block: 22px;
+}
+
+.mhc-public-copyright {
+    margin: 0;
+    color: #c7d7e8;
+}
+
+.mhc-public-home {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, .35);
+}
+
+.mhc-public-home:hover {
+    border-bottom-color: #fff;
+}
+
+.mhc-public-socials {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.mhc-public-socials a {
+    display: grid;
+    place-items: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, .35);
+    background: rgba(255, 255, 255, .08);
+    transition: background .2s ease, border-color .2s ease;
+}
+
+.mhc-public-socials a:hover {
+    background: #27b8d0;
+    border-color: #27b8d0;
+}
+
+.mhc-public-socials svg {
+    display: block;
+    width: 18px;
+    height: 18px;
+    fill: #fff;
+}
+
+.mhc-public-socials a:hover svg {
+    fill: #072846;
+}
+
+@media (max-width: 700px) {
+    .mhc-public-footer-inner {
+        flex-direction: column;
+        text-align: center;
+        padding-block: 26px;
+    }
+}
