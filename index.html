@@ -64,7 +64,12 @@
         .main-nav .apply-link:hover { border-color: var(--blue-deep); background: var(--blue-deep); }
         .menu-toggle { display: none; border: 1px solid var(--rule); background: var(--paper); color: var(--ink); padding: 8px 11px; cursor: pointer; }
         .hero { position: relative; min-height: 570px; isolation: isolate; display: flex; align-items: center; color: #fff; background: var(--blue); overflow: hidden; }
-        .hero::before { position: absolute; z-index: -2; inset: 0; content: ""; background: url("gradyating%20students.webp") center 43% / cover no-repeat; }
+        .hero-slides { position: absolute; z-index: -2; inset: 0; }
+        .hero-slide { position: absolute; inset: 0; background-size: cover; background-position: center 43%; background-repeat: no-repeat; opacity: 0; transition: opacity 1.4s ease-in-out; }
+        .hero-slide.active { opacity: 1; }
+        .hero-dots { position: absolute; z-index: 1; right: max(20px, calc((100vw - 1160px) / 2)); bottom: 22px; display: flex; gap: 8px; }
+        .hero-dot { width: 11px; height: 11px; padding: 0; border: 1px solid #fff; border-radius: 50%; background: transparent; cursor: pointer; }
+        .hero-dot.active { background: #fff; }
         .hero::after { position: absolute; z-index: -1; inset: 0; content: ""; background: linear-gradient(90deg, rgba(5, 34, 72, .9), rgba(7, 53, 107, .72) 52%, rgba(8, 37, 74, .2)); }
         .hero-copy { max-width: 720px; padding-block: 76px 88px; animation: enter .65s ease-out both; }
         .eyebrow { margin: 0; color: var(--cyan); font-size: 13px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
@@ -214,7 +219,7 @@
             .main-nav a, .main-nav a:not(.apply-link) { display: block; padding: 11px 4px; border-bottom: 1px solid var(--rule); }
             .main-nav .apply-link { margin-top: 10px; text-align: center; }
             .hero { min-height: 510px; }
-            .hero::before { background-position: 56% center; }
+            .hero-slide { background-position: 56% center; }
             .hero-copy { padding-block: 60px 70px; }
             .hero-copy > p:not(.eyebrow) { font-size: 18px; }
             .quick-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -279,6 +284,13 @@
 
     <main id="top">
         <section class="hero full" aria-labelledby="heroTitle">
+            <div class="hero-slides" aria-hidden="true">
+            <div class="hero-slide active" style="background-image:url('gradyating%20students.webp')"></div>
+            <div class="hero-slide" style="background-image:url('student%202.webp')"></div>
+            <div class="hero-slide" style="background-image:url('principle.webp')"></div>
+            <div class="hero-slide" style="background-image:url('student%205.webp')"></div>
+            </div>
+            <div class="hero-dots" role="group" aria-label="Hero images"></div>
             <div class="wrap"><div class="hero-copy">
                 <p class="eyebrow">Practical learning · Lusaka, Zambia</p>
                 <h1 id="heroTitle">Munali Hills College of Biotechnology</h1>
@@ -643,6 +655,31 @@
 
         showGallerySlide(0);
         restartGalleryAutoplay();
+
+        (function () {
+            const slides = Array.from(document.querySelectorAll('.hero-slide'));
+            const dotsBox = document.querySelector('.hero-dots');
+            if (slides.length < 2) return;
+            let i = 0, timer;
+            const dots = slides.map((_, n) => {
+                const b = document.createElement('button');
+                b.type = 'button'; b.className = 'hero-dot' + (n === 0 ? ' active' : '');
+                b.setAttribute('aria-label', 'Show hero image ' + (n + 1));
+                b.addEventListener('click', () => { show(n); start(); });
+                dotsBox.appendChild(b); return b;
+            });
+            function show(n) {
+                i = (n + slides.length) % slides.length;
+                slides.forEach((s, k) => s.classList.toggle('active', k === i));
+                dots.forEach((d, k) => d.classList.toggle('active', k === i));
+            }
+            function start() {
+                clearInterval(timer);
+                if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+                timer = setInterval(() => show(i + 1), 5000);
+            }
+            start();
+        })();
 
         fetch('announcements.json').then(r => r.ok ? r.json() : []).catch(() => []).then(items => {
             if (!Array.isArray(items) || !items.length) return;
